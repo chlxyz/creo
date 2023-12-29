@@ -12,8 +12,8 @@ function Nav() {
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               {/* LOGO */}
-              <Link href="/" title='hybrid'>
-                <h1 className="titl text-2xl mb-4 text-black bg-white rounded-md pr-2 pl-2">C. R. E. O.</h1>
+              <Link href="/">
+                <h1 className="titl text-1xl mb-2 text-white bg-grey shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#fff,0_0_15px_#fff,0_0_30px_#fff] rounded-md pr-2 pl-2 md:mb-4 md:text-2xl">C. R. E. O.</h1>
               </Link>
               {/* HAMBURGER BUTTON FOR MOBILE */}
               <div className="md:hidden">
