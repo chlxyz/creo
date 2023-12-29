@@ -22,10 +22,10 @@ function Nav() {
                   onClick={() => setNavbar(!navbar)}
                 >
                   {navbar ? (
-                    <Image src="/images/cancel.png" width={30} height={30} alt="logo" />
+                    <Image src="/images/circ22.png" width={30} height={30} alt="logo" />
                   ) : (
                     <Image
-                      src="/images/menui.png"
+                      src="/images/circ.png"
                       width={30}
                       height={30}
                       alt="logo"
