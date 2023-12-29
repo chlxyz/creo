@@ -1,10 +1,60 @@
-export default function Navbar(){
-    return (
-        <nav className="navbar backdrop-blur-md">
-            <ul className="nav flex float-left">    
-                <li className="text-black text-center mx-8 my-10 bg-white rounded-md pr-2 pl-2 md:my-auto md:mx-96 md:mt-16">C. R. E. D.</li>
-                <li className="text-white text-center my-10 ml-36 md:my-auto md:ml-auto md:mt-16">OCREON</li>
-            </ul>
-        </nav>
-    )
+"use client";
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+
+function Nav() {
+  const [navbar, setNavbar] = useState(false);
+  return (
+    <div>
+      <nav className="w-full bg-transparent fixed top-0 left-0 right-0 z-10 mt-8">
+        <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+          <div>
+            <div className="flex items-center justify-between py-3 md:py-5 md:block">
+              {/* LOGO */}
+              <Link href="/" title='hybrid'>
+                <h1 className="titl text-2xl mb-4 text-black bg-white rounded-md pr-2 pl-2">C. R. E. O.</h1>
+              </Link>
+              {/* HAMBURGER BUTTON FOR MOBILE */}
+              <div className="md:hidden">
+                <button
+                  className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                  onClick={() => setNavbar(!navbar)}
+                >
+                  {navbar ? (
+                    <Image src="/images/cancel.png" width={30} height={30} alt="logo" />
+                  ) : (
+                    <Image
+                      src="/images/menui.png"
+                      width={30}
+                      height={30}
+                      alt="logo"
+                      className="focus:border-none active:border-none"
+                    />
+                  )}
+                </button>
+              </div>
+            </div>
+          </div>  
+          <div>
+            <div
+              className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+                navbar ? 'p-12 md:p-0 block' : 'hidden'
+              }`}
+            >
+              <ul className="h-screen md:h-auto items-center justify-center md:flex ">
+                <li className="nav pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:text-[#939faf]  border-white  md:hover:text-[#939faf] md:hover:bg-transparent">
+                  <Link href="https:/chrncle.vercel.app/" onClick={() => setNavbar(!navbar)}>
+                    OCREON
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  );
 }
+
+export default Nav;

@@ -45,8 +45,26 @@ body {
   font-family: "Betatron";
 }
 
-.container {
+.titl {
+  font-family: "Betatron";
+}
+
+.home {
   background-image: url("../public/images/ethereal.gif");
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@media (max-width: 767px) {
+  .home {
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 768px) {
+  .home {
+    background-size: cover;
+  }
+}
+
